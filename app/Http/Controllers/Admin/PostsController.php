@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreUserRequest;
-use App\Models\Role;
-use App\Models\User;
+use App\Http\Requests\StorePostRequest;
+use App\Models\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
-class UsersController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +17,9 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users=User::all();
-        return view('admin.users.all',compact("users"));
+        $posts=Post::all();
+return view('admin.posts.all',compact('posts'));
+
     }
 
     /**
@@ -29,9 +29,10 @@ class UsersController extends Controller
      */
     public function create()
     {
-        $roles=Role::all();
+        $rolesposts=Post::all();
 
-        return view('admin.users.create',compact('roles'));
+        return view('admin.posts.create');
+
     }
 
     /**
@@ -40,16 +41,20 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUserRequest $request)
+    public function store(StorePostRequest $request)
     {
-        User::create([
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'role_id'=>$request->role_id,
-            'password'=>Hash::make($request->password)
+        $image=$request->file('image');
+        $postImage=Time() . "_" . $image->getClientOriginalName();
+        $image->move('Posts',$postImage);
+        Post::create([
+            'title'=>$request->title,
+            'desc'=>$request->desc,
+            'author'=>Auth::user()->name,
+            'user_id'=>Auth::user()->id,
+            'image'=>$postImage
         ]);
-        $users=User::all();
-        return view('admin.users.all',compact('users'));
+        $posts=Post::all();
+        return view('admin.posts.all',compact('posts'));
 
     }
 
@@ -61,9 +66,9 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user=User::findOrFail($id);
-        return view('admin.users.show',compact('user'));
-        }
+        $post=Post::findOrFail($id);
+        return view('admin.posts.show',compact('post'));
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -71,10 +76,11 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request,$id)
+    public function edit($id)
     {
-        $user=User::findOrFail($id);
-        return view('admin.users.edit',compact('user'));
+        $post=Post::findOrFail($id);
+        return view('admin.posts.edit',compact('post'));
+
     }
 
     /**
@@ -86,13 +92,13 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user=User::findOrFail($id);
-        $user->update([
-            'name'=>$request->name,
-            'email'=>$request->email
+        $post=Post::findOrFail($id);
+        $post->update([
+            'title'=>$request->title,
+            'discerption'=>$request->discerption
         ]);
-        $users=User::all();
-        return view('admin.users.all',compact('users'));
+        $posts=Post::all();
+        return view('admin.posts.all',compact('posts'));
 
     }
 
@@ -104,8 +110,8 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user=User::findOrFail($id);
-        $user->delete();
+        $post=Post::findOrFail($id);
+        $post->delete();
         return redirect()->back();
     }
 }

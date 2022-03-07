@@ -30,10 +30,10 @@ class ResetPasswordController extends Controller
 
     protected function redirectTo(){
         if(Auth()->user()->role==1 || 2){
-            return "admin";
+        return   url('/admin');
         }
         elseif(Auth()->user()->role==3 ){
-            return "/home";
+        return   route('home');
         }
     }
 
