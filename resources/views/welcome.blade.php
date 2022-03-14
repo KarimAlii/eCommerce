@@ -30,34 +30,44 @@
     </div>
     {{-- End Carousel --}}
 {{-- Start Collection --}}
-<div class="collection container mt-4 position-relative">
-<div class="row ">
-<div class="col-lg-7 position-relative">
-    <div class="desc text-center position-absolute top-50 start-50 translate-middle">
-        <a href="" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
-    </div>
-        <img src="{{URL::asset('Collection/Women.jpg')}}" class="h-100 w-100" alt="...">
-</div>
-<div class="col-lg-5">
-        <img src="{{URL::asset('Collection/Accessories.jpg')}}" class=" h-50 w-100" alt="...">
-</div>
-<div class="t-collection col-lg-7 position-absolute top-100 ">
-    <h2>
-        Hot Collection
-    </h2>
-    <h3>
-        New Trend For Women
-    </h3>
-    <P>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, cum obcaecati? Modi, enim nam? Eum distinctio officiis, error eaque perferendis maiores, qui deleniti tempora excepturi labore dolorum. Dignissimos, obcaecati blanditiis.
-    </P>
-    <a href="" class="btn btn-light"> Shop Now</a>
-</div>
-<div class="col-lg-5 position-absolute top-50 end-0 ms-5 mt-5">
+<div class="container mt-5 collection">
+    <div class="row">
+        <div class="col-lg-7  ">
+        <div class="position-relative">
+            <div class="desc text-center position-absolute top-50 start-50 translate-middle">
+                <a href="" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
+            </div>
+            <img src="{{URL::asset('Collection/Women.jpg')}}" class=" w-100" alt="...">
+        </div>
+        <div class="t-collection mt-5 pe-5">
+            <h2>
+                Hot Collection
+            </h2>
+            <h3>
+                New Trend For Women
+            </h3>
+            <P>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, cum obcaecati? Modi, enim nam? Eum distinctio officiis, error eaque perferendis maiores, qui deleniti tempora excepturi labore dolorum. Dignissimos, obcaecati blanditiis.
+            </P>
+            <a href="" class="btn btn-light"> Shop Now</a>
 
-    <img src="{{URL::asset('Collection/Men.jpg')}}" class=" w-100 h-75" alt="...">
-</div>
-</div>
+        </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="mb-3 position-relative">
+                <div class="desc text-center position-absolute top-50 start-50 translate-middle">
+                    <a href="" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
+                </div>
+            <img src="{{URL::asset('Collection/Accessories.jpg')}}" class="w-100" alt="...">
+            </div>
+            <div class="position-relative">
+                <div class="desc text-center position-absolute top-50 start-50 translate-middle">
+                    <a href="" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
+                </div>
+                <img src="{{URL::asset('Collection/Men.jpg')}}" class=" w-100" alt="...">
+            </div>
+        </div>
+    </div>
 </div>
 {{-- End Collection --}}
 @endsection
