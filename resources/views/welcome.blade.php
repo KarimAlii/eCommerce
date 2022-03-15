@@ -49,7 +49,7 @@
             <P>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, cum obcaecati? Modi, enim nam? Eum distinctio officiis, error eaque perferendis maiores, qui deleniti tempora excepturi labore dolorum. Dignissimos, obcaecati blanditiis.
             </P>
-            <a href="" class="btn btn-light"> Shop Now</a>
+            <a href="" class="show-more btn btn-light"> Shop Now</a>
 
         </div>
         </div>
@@ -70,4 +70,58 @@
     </div>
 </div>
 {{-- End Collection --}}
+{{-- Start Posters  --}}
+    <div class="d-flex mt-5">
+        <img src="{{URL::asset('Posters/Female.png')}}" class="w-50" alt="...">
+        <img src="{{URL::asset('Posters/Male.png')}}" class="w-50" alt="...">
+</div>
+{{-- End Posters  --}}
+{{-- Start Quote --}}
+<div class="d-flex mt-5">
+    <img src="{{URL::asset('Posters/Qoute.png')}}" class="w-100" alt="...">
+</div>
+{{-- End Quote --}}
+{{-- Start Blog --}}
+
+<div class="blog mt-5 container">
+    <div>
+
+        <h1 class="text-center w-100 mt-5 mb-5">Latest Blog</h1>
+
+    </div>
+    <div class="row">
+
+@foreach ($posts as $post )
+<div class="col-lg-4">
+    <img src="{{URL::asset('posts')}}/{{$post->image}}" alt="">
+    <h2 class=" mt-3">{{$post->title}}</h2>
+    <p class=" mt-3">{{$post->desc}}</p>
+    <a href="" class="btn btn-light">READ MORE</a>
+</div>
+@endforeach
+</div>
+</div>
+
+{{-- End Blog --}}
+{{-- Start Brands --}}
+<div class="brands container mt-5">
+    <h1 class="text-center  mt-5 mb-5">Shop By Brand</h1>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <img src="{{URL::asset('Brands/Adidas.png')}}" class="w-100" alt="...">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <img src="{{URL::asset('Brands/Nike.png')}}" class="w-100" alt="...">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <img src="{{URL::asset('Brands/H&M.png')}}" class="w-100" alt="...">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <img src="{{URL::asset('Brands/Zara.png')}}" class="w-100" alt="...">
+        </div>
+    </div>
+</div>
+{{-- End Brands --}}
+
 @endsection
