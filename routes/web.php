@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\SocialController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,8 +19,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',[PostsController::class,'ShowPosts']);
+Route::prefix('products')->group(function(){
+    Route::get('/men', [ProductsController::class, 'menProducts']);
+});
+Route::get('/',[HomeController::class,'welcome']);
+Route::get('/profile',[ProfileController::class,'showProfile']);
+Route::get('/profile',[ProfileController::class,'showProfile']);
 Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
 Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
 Auth::routes(['verify'=>true]);

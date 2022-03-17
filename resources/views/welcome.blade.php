@@ -84,15 +84,13 @@
 {{-- Start Blog --}}
 
 <div class="blog mt-5 container">
-    <div>
 
-        <h1 class="text-center w-100 mt-5 mb-5">Latest Blog</h1>
+    <h1 class="w-100 text-center mt-5 mb-5"><span>Latest Blog</span></h1>
 
-    </div>
     <div class="row">
 
 @foreach ($posts as $post )
-<div class="col-lg-4">
+<div class="col-lg-4 col-md-6 col-sm-12">
     <img src="{{URL::asset('posts')}}/{{$post->image}}" alt="">
     <h2 class=" mt-3">{{$post->title}}</h2>
     <p class=" mt-3">{{$post->desc}}</p>
@@ -104,8 +102,8 @@
 
 {{-- End Blog --}}
 {{-- Start Brands --}}
-<div class="brands container mt-5">
-    <h1 class="text-center  mt-5 mb-5">Shop By Brand</h1>
+<div class="brands container mt-5 mb-5">
+    <h1 class="w-100 text-center mt-5 mb-5"><span>Shop By Brand</span></h1>
 
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-12">
