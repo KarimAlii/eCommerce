@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ms-auto p-4 mb-3 mb-lg-0">
         <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Men</a>
+    <a class="nav-link active" aria-current="page" href="/products/men">Men</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link " aria-current="page" href="#">Women</a>
+        <a class="nav-link " aria-current="page" href="/products/women">Women</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">Accessories</a>
+        <a class="nav-link" href="/products/accs">Accessories</a>
         </li>
 
     </ul>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -19,4 +20,9 @@ class ProductsController extends Controller
         $products = Product::all();
         return view('products.accs',compact('products'));
     }
+public function search(){
+    $search_text= $_GET['query'];
+    $products=Product::where('name','LIKE','%'. $search_text .'%')->get();
+    return view('products.search',compact('products'));
+}
 }

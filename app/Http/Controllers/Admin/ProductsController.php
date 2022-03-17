@@ -91,7 +91,6 @@ class ProductsController extends Controller
         $product->update([
             'name'=>$request->name,
             'price'=>$request->price,
-            'image'=>$request->image,
         ]);
         $products=Product::all();
         return view('admin.products.all',compact('products'));

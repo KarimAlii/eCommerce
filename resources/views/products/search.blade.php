@@ -5,7 +5,6 @@
 
     <div class="row">
         @foreach ($products as $product )
-        @if ($product->category_id == 1)
         <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="product-grid">
                 <div class="product-image">
@@ -27,8 +26,6 @@
                 </div>
             </div>
         </div>
-        @else
-        @endif
         @endforeach
             </div>
     </div>

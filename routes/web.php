@@ -21,7 +21,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::prefix('products')->group(function(){
     Route::get('/men', [ProductsController::class, 'menProducts']);
+    Route::get('/women', [ProductsController::class, 'womenProducts']);
+    Route::get('/accs', [ProductsController::class, 'accsProducts']);
 });
+Route::get('/search',[ProductsController::class, 'search']);
 Route::get('/',[HomeController::class,'welcome']);
 Route::get('/profile',[ProfileController::class,'showProfile']);
 Route::get('/profile',[ProfileController::class,'showProfile']);

@@ -10,13 +10,13 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-        <img src="{{URL::asset('Carousel/1.jpg')}}" class="d-block  h-50 w-100" alt="...">
+        <img src="{{URL::asset('Carousel/1.jpg')}}" class="d-block  h-50 w-100  " alt="...">
         </div>
         <div class="carousel-item">
-        <img src="{{URL::asset('Carousel/2.jpg')}}" class="d-block h-50 w-100" alt="...">
+        <img src="{{URL::asset('Carousel/2.jpg')}}" class="d-block h-50 w-100 " alt="...">
         </div>
         <div class="carousel-item">
-        <img src="{{URL::asset('Carousel/3.jpg')}}" class="d-block h-50 w-100" alt="...">
+        <img src="{{URL::asset('Carousel/3.jpg')}}" class="d-block h-50 w-100  " alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -35,7 +35,7 @@
         <div class="col-lg-7  ">
         <div class="position-relative">
             <div class="desc text-center position-absolute top-50 start-50 translate-middle">
-                <a href="" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
+                <a href="/products/women" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
             </div>
             <img src="{{URL::asset('Collection/Women.jpg')}}" class=" w-100" alt="...">
         </div>
@@ -56,13 +56,13 @@
         <div class="col-lg-5">
             <div class="mb-3 position-relative">
                 <div class="desc text-center position-absolute top-50 start-50 translate-middle">
-                    <a href="" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
+                    <a href="/products/accs" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
                 </div>
             <img src="{{URL::asset('Collection/Accessories.jpg')}}" class="w-100" alt="...">
             </div>
             <div class="position-relative">
                 <div class="desc text-center position-absolute top-50 start-50 translate-middle">
-                    <a href="" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
+                    <a href="/products/men" class="btn show-more position-absolute top-50 start-50 translate-middle">View Collection</a>
                 </div>
                 <img src="{{URL::asset('Collection/Men.jpg')}}" class=" w-100" alt="...">
             </div>
@@ -91,7 +91,7 @@
 
 @foreach ($posts as $post )
 <div class="col-lg-4 col-md-6 col-sm-12">
-    <img src="{{URL::asset('posts')}}/{{$post->image}}" alt="">
+    <img src="{{URL::asset('posts')}}/{{$post->image}}" class="w-100" alt="">
     <h2 class=" mt-3">{{$post->title}}</h2>
     <p class=" mt-3">{{$post->desc}}</p>
     <a href="" class="btn btn-light">READ MORE</a>

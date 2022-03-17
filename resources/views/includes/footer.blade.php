@@ -3,7 +3,7 @@
 <div class=" container ">
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-12">
-<h3 class="mb-5">SHOPS</h3>
+<h3 class="mb-4">SHOPS</h3>
 <ul>
     <li> <a href="" >Women</a></li>
     <li> <a href="" >Men</a></li>
@@ -11,14 +11,14 @@
 </ul>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-12">
-        <h3 class="mb-5">INFORMATION</h3>
+        <h3 class="mb-4">INFORMATION</h3>
         <ul>
             <li> <a href="" >Blog</a></li>
             <li> <a href="" >About Us</a></li>
             <li> <a href="" >New Collection</a></li>
         </ul>    </div>
     <div class="col-lg-3 col-md-6 col-sm-12">
-        <h3 class="mb-5">CUSTOMER SERVICE</h3>
+        <h3 class="mb-4">CUSTOMER SERVICE</h3>
         <ul>
             <li> <a href="" >Search Terms</a></li>
             <li> <a href="" >Advanced Search</a></li>
@@ -43,9 +43,9 @@
         <p class="mt-3  ">© 2022 Copyright:Developed by Karim Ali</p>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 ">
-        <span class="iconify" data-icon="logos:visa" data-width="44"></span>
-        <span class="iconify" data-icon="cib:cc-paypal" data-width="44"></span>
-        <span class="iconify" data-icon="logos:mastercard" data-width="44"></span>
+        <span class="iconify ps-2" data-icon="logos:visa" data-width="44"></span>
+        <span class="iconify ps-2" data-icon="cib:cc-paypal" data-width="44"></span>
+        <span class="iconify ps-2" data-icon="logos:mastercard" data-width="44"></span>
     </div>
 </div>
 </div>

@@ -65,10 +65,10 @@
 
         </nav>
         <div class="container mb-4 mt-4 d-flex justify-content-center   ">
-                        <div class="input-box w-25  ">
-                            <input type="text" class="rounded-pill  form-control" placeholder="Search Here ">
+                        <form class="input-box w-25" type="get" action="{{url('/search')}}">
+                            <input type="search" class="rounded-pill form-control" name="query" placeholder="Search Here ">
                             <i class="ps-2 fa fa-search"></i>
-                        </div>
+                        </form>
                     </div>
         </div>
 
