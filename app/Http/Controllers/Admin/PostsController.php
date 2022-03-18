@@ -45,7 +45,7 @@ return view('admin.posts.all',compact('posts'));
     {
         $image=$request->file('image');
         $postImage=Time() . "_" . $image->getClientOriginalName();
-        $image->move('Posts',$postImage);
+        $image->move('posts',$postImage);
         Post::create([
             'title'=>$request->title,
             'desc'=>$request->desc,

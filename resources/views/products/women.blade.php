@@ -10,7 +10,7 @@
             <div class="product-grid">
                 <div class="product-image">
                     <a href="#" class="image">
-                        <img class="pic-1" src="{{URL::asset('Products')}}/{{$product->image}}">
+                        <img class="pic-1" src="{{$product->image}}">
                     </a>
                     <div class="price"> {{$product->price}}  </div>
                     <form action="">

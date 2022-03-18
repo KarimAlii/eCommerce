@@ -25,8 +25,7 @@ Route::prefix('products')->group(function(){
 });
 Route::delete('remove-from-cart', [CartController::class,'remove']);
 Route::get('cart', [CartController::class,'cart']);
-
-
+Route::get('add-to-cart/{id}', [CartController::class,'addToCart']);
 Route::get('/search',[ProductsController::class, 'search']);
 Route::get('/',[HomeController::class,'welcome']);
 Route::get('/profile',[ProfileController::class,'showProfile']);
