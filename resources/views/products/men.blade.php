@@ -13,7 +13,9 @@
                         <img class="pic-1" src="{{URL::asset('Products')}}/{{$product->image}}">
                     </a>
                     <div class="price"> {{$product->price}}  </div>
-                    <a href="#" class="add-to-cart"> add to cart </a>
+                    <form action="">
+                        <a href="{{ url('add-to-cart/'.$product->id) }}" class="add-to-cart"> add to cart </a>
+                    </form>
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">{{$product->name}} </a></h3>

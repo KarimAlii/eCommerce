@@ -37,7 +37,7 @@
 </div>
 {{-- End Policy --}}
 {{-- Start Footer --}}
-<footer class="bg-dark text-white">
+<footer class="bg-dark text-white ">
 <div class="container text-center"><div class=" p-3 row justify-content-between" >
     <div class="col-lg-6 col-md-6 col-sm-12 ">
         <p class="mt-3  ">© 2022 Copyright:Developed by Karim Ali</p>

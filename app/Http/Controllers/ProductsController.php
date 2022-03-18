@@ -25,4 +25,5 @@ public function search(){
     $products=Product::where('name','LIKE','%'. $search_text .'%')->get();
     return view('products.search',compact('products'));
 }
+
 }

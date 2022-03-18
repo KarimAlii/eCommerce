@@ -3,5 +3,5 @@
 @include('includes.navbar2')
 
     @yield('content')
-
+    @yield('scripts')
 @include('includes.footer')
