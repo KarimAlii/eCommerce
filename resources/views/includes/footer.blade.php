@@ -1,4 +1,5 @@
 {{-- Start Policy --}}
+<footer>
 <div class="policy mt-5  pt-5 pb-5 ">
 <div class=" container ">
 <div class="row">
@@ -36,8 +37,8 @@
 </div>
 </div>
 {{-- End Policy --}}
-{{-- Start Footer --}}
-<footer class="bg-dark text-white ">
+{{-- Start CopyRight --}}
+<div class="copy-right bg-dark text-white ">
 <div class="container text-center"><div class=" p-3 row justify-content-between" >
     <div class="col-lg-6 col-md-6 col-sm-12 ">
         <p class="mt-3  ">© 2022 Copyright:Developed by Karim Ali</p>
@@ -49,8 +50,10 @@
     </div>
 </div>
 </div>
-</footer>
+</div>
 {{-- End Footer --}}
+
+</footer>
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
