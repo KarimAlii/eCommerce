@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\SocialController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +28,9 @@ Route::delete('remove-from-cart', [CartController::class,'remove']);
 Route::get('cart', [CartController::class,'cart']);
 Route::get('add-to-cart/{id}', [CartController::class,'addToCart']);
 Route::get('/search',[ProductsController::class, 'search']);
-Route::get('/',[HomeController::class,'welcome']);
+
+Route::get('/',[HomePageController::class,'welcome']);
+
 Route::get('/profile',[ProfileController::class,'showProfile']);
 Route::get('/profile',[ProfileController::class,'showProfile']);
 Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);

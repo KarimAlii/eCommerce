@@ -27,10 +27,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function welcome()
-    {
-        $posts = Post::all();
-        $products = Product::all();
-        return view('welcome',compact('posts','products'));
-    }
 }
